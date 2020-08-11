@@ -10,12 +10,13 @@ all: $(NAME).hex
 SRCS = \
 main.c \
 src/gpio/gpio.c \
+src/HD44780/lcd.c \
 
 INCLUDES = \
 -Iinc \
 -Isrc \
 
-CFLAGS = -mmcu=$(CPU) -DF_CPU=$(F_CPU) -Os $(INCLUDES)
+CFLAGS = -mmcu=$(CPU) -DF_CPU=$(F_CPU) -Os $(INCLUDES) -Werror -Wextra -Wall
 OBJS = $(SRCS:.c=.o)
 
 $(OBJS): $(SRCS)
