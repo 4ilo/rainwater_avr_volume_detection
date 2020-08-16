@@ -137,17 +137,17 @@ Wire Wire Line
 Wire Wire Line
 	4500 2000 4750 2000
 Text Label 4600 3200 0    50   ~ 0
-RS
-Text Label 4600 3300 0    50   ~ 0
-EN
-Text Label 4600 3400 0    50   ~ 0
-D4
-Text Label 4600 3500 0    50   ~ 0
-D5
-Text Label 4600 3600 0    50   ~ 0
-D6
-Text Label 4600 3700 0    50   ~ 0
 D7
+Text Label 4600 3300 0    50   ~ 0
+D6
+Text Label 4600 3400 0    50   ~ 0
+D5
+Text Label 4600 3500 0    50   ~ 0
+D4
+Text Label 4600 3600 0    50   ~ 0
+EN
+Text Label 4600 3700 0    50   ~ 0
+RS
 $Comp
 L power:GND #PWR0104
 U 1 1 5F388FDC
@@ -252,7 +252,7 @@ P 3400 6600
 F 0 "Co1" H 3515 6646 50  0000 L CNN
 F 1 "10uF" H 3515 6555 50  0000 L CNN
 F 2 "Capacitor_SMD:CP_Elec_4x5.4" H 3438 6450 50  0001 C CNN
-F 3 "~" H 3400 6600 50  0001 C CNN
+F 3 "https://taydaelectronics.com/datasheets/files/a-1822.pdf" H 3400 6600 50  0001 C CNN
 	1    3400 6600
 	1    0    0    -1  
 $EndComp
@@ -489,7 +489,7 @@ L Device:R_Small R7
 U 1 1 5F3A0CC7
 P 9450 3200
 F 0 "R7" H 9509 3246 50  0000 L CNN
-F 1 "250" H 9509 3155 50  0000 L CNN
+F 1 "240" H 9509 3155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9450 3200 50  0001 C CNN
 F 3 "~" H 9450 3200 50  0001 C CNN
 	1    9450 3200
@@ -561,7 +561,7 @@ L Device:R_Small R9
 U 1 1 5F3C30DD
 P 9450 4550
 F 0 "R9" H 9509 4596 50  0000 L CNN
-F 1 "250" H 9509 4505 50  0000 L CNN
+F 1 "240" H 9509 4505 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9450 4550 50  0001 C CNN
 F 3 "~" H 9450 4550 50  0001 C CNN
 	1    9450 4550
