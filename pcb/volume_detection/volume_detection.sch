@@ -188,7 +188,7 @@ L Device:C C3
 U 1 1 5F38DE28
 P 2500 2100
 F 0 "C3" H 2615 2146 50  0000 L CNN
-F 1 "100uf" H 2615 2055 50  0000 L CNN
+F 1 "100nf" H 2615 2055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2538 1950 50  0001 C CNN
 F 3 "~" H 2500 2100 50  0001 C CNN
 	1    2500 2100
@@ -239,7 +239,7 @@ L Device:C C1
 U 1 1 5F388136
 P 1700 5600
 F 0 "C1" H 1815 5646 50  0000 L CNN
-F 1 "100uf" H 1815 5555 50  0000 L CNN
+F 1 "100nf" H 1815 5555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1738 5450 50  0001 C CNN
 F 3 "~" H 1700 5600 50  0001 C CNN
 	1    1700 5600
@@ -281,13 +281,13 @@ $EndComp
 $Comp
 L Device:R_Small R1
 U 1 1 5F38C4F4
-P 2900 6150
-F 0 "R1" H 2959 6196 50  0000 L CNN
-F 1 "1.2k" H 2959 6105 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2900 6150 50  0001 C CNN
-F 3 "~" H 2900 6150 50  0001 C CNN
-	1    2900 6150
-	1    0    0    -1  
+P 2700 6350
+F 0 "R1" H 2759 6396 50  0000 L CNN
+F 1 "1.2k" H 2759 6305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2700 6350 50  0001 C CNN
+F 3 "~" H 2700 6350 50  0001 C CNN
+	1    2700 6350
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:R_Small R2
@@ -306,7 +306,7 @@ U 1 1 5F38E417
 P 3400 6100
 F 0 "L1" V 3354 6178 50  0000 L CNN
 F 1 "150uH" V 3445 6178 50  0000 L CNN
-F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P10.16mm_Horizontal_Vishay_IM-1" H 3400 6100 50  0001 C CNN
+F 2 "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P5.08mm_Vertical_Fastron_MICC" H 3400 6100 50  0001 C CNN
 F 3 "~" H 3400 6100 50  0001 C CNN
 	1    3400 6100
 	0    1    1    0   
@@ -317,7 +317,7 @@ U 1 1 5F38F2BB
 P 3900 6350
 F 0 "L2" H 3900 6565 50  0000 C CNN
 F 1 "1uH" H 3900 6474 50  0000 C CNN
-F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P10.16mm_Horizontal_Vishay_IM-1" H 3900 6350 50  0001 C CNN
+F 2 "Inductor_THT:L_Axial_L6.6mm_D2.7mm_P10.16mm_Horizontal_Vishay_IM-2" H 3900 6350 50  0001 C CNN
 F 3 "~" H 3900 6350 50  0001 C CNN
 	1    3900 6350
 	1    0    0    -1  
@@ -415,16 +415,7 @@ $EndComp
 Wire Wire Line
 	2900 5850 3150 5850
 Wire Wire Line
-	2900 5950 2900 6050
-Wire Wire Line
-	2900 6250 2900 6350
-Wire Wire Line
-	2900 6350 3000 6350
-Wire Wire Line
 	2500 6150 2500 6350
-Wire Wire Line
-	2900 6350 2500 6350
-Connection ~ 2900 6350
 Connection ~ 2500 6350
 Wire Wire Line
 	2500 6350 2500 6500
@@ -827,4 +818,13 @@ Wire Wire Line
 Connection ~ 1400 1300
 Wire Wire Line
 	1400 1300 1400 1400
+Wire Wire Line
+	2600 6350 2500 6350
+Wire Wire Line
+	2800 6350 2900 6350
+Wire Wire Line
+	2900 5950 2900 6350
+Connection ~ 2900 6350
+Wire Wire Line
+	2900 6350 3000 6350
 $EndSCHEMATC
