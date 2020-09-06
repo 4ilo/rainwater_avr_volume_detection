@@ -71,6 +71,7 @@ int8_t Lcd_init(Lcd_HandleTypeDef * lcd);
 int8_t Lcd_int(Lcd_HandleTypeDef * lcd, int number);
 int8_t Lcd_string(Lcd_HandleTypeDef * lcd, char * string);
 int8_t Lcd_cursor(Lcd_HandleTypeDef * lcd, uint8_t row, uint8_t col);
+int8_t Lcd_clear(Lcd_HandleTypeDef * lcd);
 Lcd_HandleTypeDef Lcd_create(
     Lcd_PortType port[], Lcd_PinType pin[],
     Lcd_PortType rs_port, Lcd_PinType rs_pin,

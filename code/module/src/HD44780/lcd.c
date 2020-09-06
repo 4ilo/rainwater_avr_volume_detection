@@ -109,6 +109,14 @@ int8_t Lcd_cursor(Lcd_HandleTypeDef * lcd, uint8_t row, uint8_t col)
     return lcd_write_data(lcd, SET_DDRAM_ADDR | ((row * 0x40) + col), LCD_COMMAND_REG);
 }
 
+/**
+ * Clear the screen
+ */
+int8_t Lcd_clear(Lcd_HandleTypeDef * lcd)
+{
+    return lcd_write_data(lcd, CLEAR_DISPLAY, LCD_COMMAND_REG);
+}
+
 
 /************************************** Static function definition **************************************/
 

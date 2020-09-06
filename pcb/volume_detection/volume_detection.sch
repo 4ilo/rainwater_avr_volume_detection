@@ -38,12 +38,12 @@ $EndComp
 $Comp
 L power:GND #PWR0101
 U 1 1 5F34BC92
-P 7300 2350
-F 0 "#PWR0101" H 7300 2100 50  0001 C CNN
-F 1 "GND" H 7305 2177 50  0000 C CNN
-F 2 "" H 7300 2350 50  0001 C CNN
-F 3 "" H 7300 2350 50  0001 C CNN
-	1    7300 2350
+P 7200 2600
+F 0 "#PWR0101" H 7200 2350 50  0001 C CNN
+F 1 "GND" H 7205 2427 50  0000 C CNN
+F 2 "" H 7200 2600 50  0001 C CNN
+F 3 "" H 7200 2600 50  0001 C CNN
+	1    7200 2600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -60,13 +60,13 @@ $EndComp
 $Comp
 L Device:R R5
 U 1 1 5F34FD8B
-P 7150 2200
-F 0 "R5" V 7250 2200 50  0000 L CNN
-F 1 "220" V 7250 2050 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7080 2200 50  0001 C CNN
-F 3 "~" H 7150 2200 50  0001 C CNN
-	1    7150 2200
-	0    -1   -1   0   
+P 7000 2350
+F 0 "R5" V 7100 2350 50  0000 L CNN
+F 1 "220" V 7100 2200 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 2350 50  0001 C CNN
+F 3 "~" H 7000 2350 50  0001 C CNN
+	1    7000 2350
+	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0103
@@ -92,7 +92,6 @@ F 3 "~" H 6700 2200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6850 2200 7000 2200
-Connection ~ 7000 2200
 Wire Wire Line
 	7000 1750 7000 2200
 Wire Wire Line
@@ -104,8 +103,6 @@ Wire Wire Line
 Connection ~ 6550 2000
 Wire Wire Line
 	6550 2000 6550 2200
-Wire Wire Line
-	7300 2200 7300 2350
 Wire Wire Line
 	7100 1750 7100 1950
 Wire Wire Line
@@ -650,7 +647,7 @@ U 1 1 5F3D7FF4
 P 6900 4750
 F 0 "J1" H 6950 5167 50  0000 C CNN
 F 1 "Avr ISP" H 6950 5076 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 6900 4750 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Horizontal" H 6900 4750 50  0001 C CNN
 F 3 "~" H 6900 4750 50  0001 C CNN
 	1    6900 4750
 	1    0    0    -1  
@@ -827,4 +824,40 @@ Wire Wire Line
 Connection ~ 2900 6350
 Wire Wire Line
 	2900 6350 3000 6350
+Connection ~ 7000 2200
+Wire Wire Line
+	7000 2500 7200 2500
+Wire Wire Line
+	7200 2500 7200 2600
+Wire Wire Line
+	7200 1750 7200 2500
+Connection ~ 7200 2500
+$Comp
+L Device:C C5
+U 1 1 5F550C42
+P 3050 1500
+F 0 "C5" V 3165 1546 50  0000 L CNN
+F 1 "100nf" V 2900 1450 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3088 1350 50  0001 C CNN
+F 3 "~" H 3050 1500 50  0001 C CNN
+	1    3050 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3200 1500 3300 1500
+$Comp
+L power:GND #PWR0123
+U 1 1 5F5559DB
+P 2850 1600
+F 0 "#PWR0123" H 2850 1350 50  0001 C CNN
+F 1 "GND" H 2855 1427 50  0000 C CNN
+F 2 "" H 2850 1600 50  0001 C CNN
+F 3 "" H 2850 1600 50  0001 C CNN
+	1    2850 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 1600 2850 1500
+Wire Wire Line
+	2850 1500 2900 1500
 $EndSCHEMATC
