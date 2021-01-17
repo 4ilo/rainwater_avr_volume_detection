@@ -24,26 +24,25 @@ int main(void)
 
     lcd = Lcd_create(ports, pins, PORT_D, PIN_5, PORT_D, PIN_4, LCD_4_BIT_MODE);
 
-    Lcd_cursor(&lcd, 1, 0);
-    Lcd_string(&lcd, "Hello");
-
     adc_init();
     uint16_t value = 0;
-
+    float current = 0;
+    float pressure = 0;
 
     while (1) {
-        //gpio_write(PORT_C, PIN_1, 1);
-        //_delay_ms(500);
-
-        //gpio_write(PORT_C, PIN_1, 0);
-        //_delay_ms(500);
-
         value = adc_read(0);
-        char buffer[10];
-        snprintf(buffer, 10, "V1=%d", value);
+        current = value * 0.02034505208;      // ((value * 5V)/1204)/240ohm * 1000mA
 
+        char buffer[16];
+        snprintf(buffer, 16, "I=%05.2fmA", current);
         Lcd_cursor(&lcd, 0, 0);
         Lcd_string(&lcd, buffer);
+
+        pressure = (0.0125 * current) - 0.05;
+        snprintf(buffer, 16, "p=%0.4fBar", pressure);
+        Lcd_cursor(&lcd, 1, 0);
+        Lcd_string(&lcd, buffer);
+
 
         _delay_ms(500);
     }
